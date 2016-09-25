@@ -1,0 +1,18 @@
+<h1>
+  Lista de Productos
+</h1>
+
+<div class="center">
+	<input #searchBox (keyup)="search(searchBox.value)" placeholder="Buscar Canción">
+</div>
+
+<article *ngFor="let song of songs">
+	<div class="play_container" (click)="play(song)"></div>
+	<div class="pause_container" (click)="pause(song)"></div>
+	<h3>{{song.name}}</h3>
+	<ul>
+		<li><b>Artista:</b> {{song.artists}}</li>
+		<li><b>Album:</b> {{song.album}}</li>
+		<li><b>Duración:</b> {{song.duration_ms}}</li>
+	</ul>
+</article>

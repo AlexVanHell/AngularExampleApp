@@ -1,0 +1,11 @@
+<h1>
+  Api de Alumnos
+</h1>
+
+<article *ngFor="let alumno of alumnos">
+	<h3>{{alumno.id}}: {{alumno.first_name}} {{alumno.last_name}}</h3>
+	<ul>
+		<li><b>Email:</b> {{alumno.email}}</li>
+		<li><b>Twitter:</b> {{alumno.twitter}}</li>
+	</ul>
+</article>

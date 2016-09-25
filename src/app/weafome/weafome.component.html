@@ -1,0 +1,25 @@
+<h1>
+  Lista de Alumnos
+</h1>
+
+<article *ngFor="let alumno of alumnos">
+	<h4 class="center">{{alumno.id}}: {{alumno.name}}</h4>
+	<ul>
+		<li></li>
+		<li>Promedio: {{alumno.promedio}}</li>
+		<li>Edad: {{alumno.edad}}</li>
+		<li>Regular: {{alumno.regular}}</li>
+		<li>Faltas: {{totalFaltas(alumno)}}</li>
+	</ul>
+
+	<div class="sold_out" *ngIf="totalFaltas(alumno) > 4 || alumno.promedio < 6">Reprobado por webon</div>
+
+	<h4 class="red center">Faltas</h4>
+	<div class="center">
+		<button (click)="removeFalta(alumno)">Quitar</button>
+		<input type="text" [(ngModel)]="alumno.faltas"/>
+		<button (click)="addFalta(alumno)">Agregar</button>	
+	</div>
+
+</article>
+

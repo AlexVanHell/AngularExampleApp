@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+	font-family: sans-serif;
+}
+
+body{
+	background-color: #e0e0e0;
+	padding: 0;
+	margin: 0;
+}
+
+.app_container{
+	padding: 50px;
+}
+
+.welcome_container{
+	width: auto;
+	height: 400px;
+	position: relative;
+	background-color: #212121;
+}
+
+.welcome_container .center_title{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 50%;
+	color: #fff;
+	font-size: 40px;
+	transform: translateY(-50%);
+}
